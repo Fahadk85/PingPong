@@ -40,7 +40,10 @@ resetBtn.addEventListener("click", resetGame);
 
 gameStart();
 
-function gameStart(){};
+function gameStart(){
+    createBall();
+    nextTick();
+};
 function nextTick(){};
 function clearBoard(){};
 function drawPaddles(){
