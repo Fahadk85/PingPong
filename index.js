@@ -44,7 +44,16 @@ function gameStart(){
     createBall();
     nextTick();
 };
-function nextTick(){};
+function nextTick(){
+    intervalID = setTimeout(() => {
+        clearBoard();
+        drawPaddles();
+        moveBall();
+        drawBall(ballX,ballY);
+        checkCollision();
+        nextTick();
+    },10)
+};
 function clearBoard(){};
 function drawPaddles(){
     ctx.strokeStyle = paddleBorder;
