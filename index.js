@@ -54,7 +54,10 @@ function nextTick(){
         nextTick();
     },10)
 };
-function clearBoard(){};
+function clearBoard(){
+    ctx.fillStyle = boardBackGround;
+    ctx.fillRect(0, 0, gameWidth, gameHeight);
+};
 function drawPaddles(){
     ctx.strokeStyle = paddleBorder;
 
