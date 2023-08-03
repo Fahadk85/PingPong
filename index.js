@@ -104,7 +104,26 @@ function drawBall(ballX, ballY){
     ctx.stroke();
     ctx.fill();
 };
-function checkCollision(){};
+function checkCollision(){
+    if(ballY <= 0 + ballRadius){
+        ballYDirection *= -1;
+    }
+    if(ballY >= gameHeight - ballRadius){
+        ballYDirection *= -1;
+    }
+    if(ballX <= 0){
+        player2Score += 1;
+        updateScore();
+        createBall();
+        return;
+    }
+    if(ballX >= gameWidth){
+        player1Score += 1;
+        updateScore();
+        createBall();
+        return;
+    }
+};
 function changeDirection(event){
     const keyPressed = event.keyCode;
     const paddle1Up = 87;
