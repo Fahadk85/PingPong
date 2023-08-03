@@ -123,6 +123,24 @@ function checkCollision(){
         createBall();
         return;
     }
+
+    if(ballX <= (paddle1.x + paddle1.width + ballRadius)){
+        if(ballY > paddle1.y && ballY < paddle1.y + paddle1.height){
+            ballX = (paddle1.x + paddle1.width) + ballRadius; //If ball gets Stuck
+            ballXDirection *= -1;
+            ballSpeed += 1;
+        }
+        
+    }
+    
+    if(ballX >= (paddle2.x - ballRadius)){
+        if(ballY > paddle2.y && ballY < paddle2.y + paddle2.height){
+            ballX = paddle2.x - ballRadius;
+            ballXDirection *= -1;
+            ballSpeed += 1;
+        }
+        
+    }
 };
 function changeDirection(event){
     const keyPressed = event.keyCode;
