@@ -103,8 +103,6 @@ function changeDirection(event){
                 paddle2.y += paddleSpeed;
             }
             break;
-        
-           
 }};
 function updateScore(){};
 function resetGame(){};
