@@ -7,6 +7,7 @@ const gameHeight = gameBoard.height;
 const boardBackGround = "Black";
 const paddle1Color = "white";
 const paddle2Color = "white";
+const paddleBorder = "white"
 const ballColor = "white";
 const ballBorderColor = "white";
 const ballRadius = 12.5;
@@ -72,8 +73,28 @@ function drawPaddles(){
 };
 function createBall(){};
 function moveBall(){};
-function drawBall(){};
+function drawBall(ballX, ballY){};
 function checkCollision(){};
-function changeDirection(){};
+function changeDirection(event){
+    const keyPressed = event.keyCode;
+    const paddle1Up = 87;
+    const paddle1Down = 83;
+    const paddle2Up = 38;
+    const paddle2Down = 40;
+
+    switch(keyPressed){
+        case(paddle1Up):
+            if(paddle1.y > 0){
+                paddle1.y -= paddleSpeed;
+            }
+            break;
+        case(paddle1Down):
+            if(paddle1.y < gameHeight - paddle1.height){
+                paddle1.y += paddleSpeed;
+            }            
+            break;
+        
+           
+}};
 function updateScore(){};
 function resetGame(){};
