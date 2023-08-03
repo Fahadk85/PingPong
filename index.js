@@ -184,14 +184,13 @@ function resetGame(){
         height: 100,
         x: 0,
         y: 0
-    }
-
+    };
     paddle2 = {
         width: 25,
         height: 100,
         x: gameWidth - 25,
         y: gameHeight - 100
-    }
+    };
     ballSpeed = 1;
     ballX = 0;
     ballY = 0;
